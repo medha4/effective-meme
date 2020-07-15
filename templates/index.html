@@ -1,13 +1,20 @@
 <html>
     <head>
-        <title>Welcome!</title>
+        <title>Microblog {{props.title}}!</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
+        <h1>Hello {{props.name}}!</h1>
         <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" placeholder="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
+        <form method="post" action="/sendBreakfast">
+            <label for="nickname">What's your nickname?</label>
+            <input type='text' name='nickname'><br><br>
+            <label for="age">How old are you?</label>
+            <input type='text' name='age'><br><br>
+            <label for="breakfast">What did you have for breakfast?</label>
+            <input type='text' name='breakfast'><br><br>
+            <label for="lunch">What did you have for lunch?</label>
+            <input type='text' name='lunch'><br>
+            <input type='submit'>
         </form>
     </body>
 </html>
